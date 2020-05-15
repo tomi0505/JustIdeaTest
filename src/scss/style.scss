@@ -5,12 +5,26 @@
 //HELPERS CLASSES
 .main-title-h {
   margin-bottom: 30px;
+  font-family: 'Hind';
   font-size: 2.2rem;
 }
 
 .second-title-h {
   margin-bottom: 50px;
   color: $secondary-color;
+}
+
+.custom-input-h {
+  margin: 5px;
+  padding: 15px;
+  color: $secondary-color;
+  background-color: $white-color;
+  border: none;
+  border-radius: 5px;
+
+  &::-webkit-input-placeholder {
+    color: $secondary-color;
+  }
 }
 
 //PAGE
@@ -24,11 +38,33 @@
     display: grid;
     grid-template-columns: 81px min-content;
     align-items: center;
+    font-family: 'Hind';
     color: $primary-color;
     text-decoration: none;
 
     @include rwd(tablet) {
       white-space: nowrap;
     }
+  }
+}
+
+.contact-b {
+  .main-title-h,
+  .second-title-h {
+    color: $white-color;
+  }
+}
+
+.contact-form-b {
+  color: $white-color;
+
+  &__send-form-btn {
+    margin: 15px;
+    padding: 15px 35px;
+    font-size: 0.9rem;
+    color: $white-color;
+    background-color: $differentiator-color;
+    border: none;
+    border-radius: 5px;
   }
 }
