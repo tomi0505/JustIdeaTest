@@ -6,10 +6,11 @@
 		<title>Strona</title>
 	</head>
 	<body>
-		<div class="container-h">
-			<main>
+		<main>
+			<div class="container-h">
 				<h1 class="main-title-h">Obszary naszych kompetencji</h1>
-				<p class="second-title-h">Pomagamy uczyć się na błędach innych. Wspieramy i rekomendujemy wartościowe rozwiązania
+				<p class="second-title-h">Pomagamy uczyć się na błędach innych. Wspieramy i rekomendujemy wartościowe
+					rozwiązania
 					biznesowe.</p>
 				<aside class="offer-b">
 					<a href="http://google.com" class="offer-b__simple">
@@ -85,38 +86,41 @@
 						<span class="offer-b__content-container">Marketing 360º</span>
 					</a>
 				</aside>
-			</main>
-			<section class="contact-b">
+			</div>
+		</main>
+		<section class="contact-b">
+			<div class="container-h">
 				<h2 class="main-title-h">Skontaktuj się z nami</h2>
 				<p class="second-title-h">Zadzwoń +48 535 015 835 lub wypełnij formularz.</p>
 				<form action="#" class="contact-form-b">
-					<div>
-						<input type="text" name="name-and-surname" class="custom-input-h" placeholder="Imię i Nazwisko">
-						<input type="tel" name="tel" class="custom-input-h" placeholder="Telefon">
-						<input type="email" name="email" class="custom-input-h" placeholder="E-mail">
+					<div class="contact-form-b__row">
+						<input type="text" name="user-name-and-surname" class="custom-input-h" placeholder="Imię i Nazwisko">
+						<input type="tel" name="user-tel" class="custom-input-h" placeholder="Telefon">
+						<input type="email" name="user-email" class="custom-input-h" placeholder="E-mail">
 					</div>
-					<div>
-						<input type="text" name="company-name" class="custom-input-h" placeholder="Firma">
-						<select name="employers-quantity" class="custom-input-h">
+					<div class="contact-form-b__row">
+						<input type="text" name="user-company-name" class="custom-input-h" placeholder="Firma">
+						<select name="user-employers-quantity" class="custom-input-h">
 							<option value="employersQuantity">Ilość pracowników</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 						</select>
-						<select name="year-profit-of-company" class="custom-input-h">
+						<select name="user-year-profit-of-company" class="custom-input-h">
 							<option value="yearProfitOfCompany">Roczny dochów firmy</option>
 							<option value="1000">1000</option>
 							<option value="2000">2000</option>
 						</select>
 					</div>
-					<textarea cols="30" rows="10" name="message" class="custom-input-h">Wiadomość</textarea>
-					<div>
-						<input type="checkbox" name="accept-terms" class="custom-input-h" id="acceptTerms">
-						<label for="acceptTerms">Zapozanałem(-łam) się z <a href="#">Polityką prywatności</a> oraz z <a
-							href="#">Zastrzeżeniami prawnymi</a>.</label>
+					<textarea cols="30" rows="10" name="user-message" class="contact-form-b__user-message custom-input-h">Wiadomość</textarea>
+					<div class="contact-form-b__row contact-form-b__row--user-accept-terms-container">
+						<input type="checkbox" name="user-accept-terms" id="acceptTerms">
+						<label for="acceptTerms" class="contact-form-b__user-accept-terms-label">Zapozanałem(-łam) się z <a href="#" class="contact-form-b__featured-content">Polityką
+							prywatności</a> oraz z <a
+							href="#" class="contact-form-b__featured-content">Zastrzeżeniami prawnymi</a>.</label>
 					</div>
-					<button class="contact-form-b__send-form-btn">WYŚLIJ</button>
+					<button class="contact-form-b__user-send-form-btn">WYŚLIJ</button>
 				</form>
-			</section>
-		</div>
+			</div>
+		</section>
 	</body>
 </html>
