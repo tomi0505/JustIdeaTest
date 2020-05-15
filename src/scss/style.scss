@@ -5,7 +5,7 @@
 //HELPERS CLASSES
 .container-h {
   margin: 0 auto;
-  padding: 50px 15px;
+  padding: 50px 30px;
   max-width: 1140px;
 }
 
@@ -50,6 +50,11 @@
   grid-row-gap: 40px;
   justify-content: center;
 
+  @include rwd(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+
   &__simple {
     display: grid;
     grid-template-columns: 1fr;
@@ -59,11 +64,22 @@
     text-decoration: none;
 
     @include rwd(medium) {
-      grid-template-columns: 81px min-content;
+      grid-template-columns: 1fr 81px;
     }
 
     @include rwd(tablet) {
       white-space: nowrap;
+    }
+  }
+
+  @include rwd(medium) {
+    &__img-container {
+      grid-column: 2/3;
+    }
+
+    &__content-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
     }
   }
 }
