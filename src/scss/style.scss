@@ -1,0 +1,34 @@
+@import 'var';
+@import 'mixin';
+@import 'settings';
+
+//HELPERS CLASSES
+.main-title-h {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+.second-title-h {
+  margin-bottom: 50px;
+  color: $secondary-color;
+}
+
+//PAGE
+.container-h {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.offer-b {
+  &__simple {
+    display: grid;
+    grid-template-columns: 81px min-content;
+    align-items: center;
+    color: $primary-color;
+    text-decoration: none;
+
+    @include rwd(tablet) {
+      white-space: nowrap;
+    }
+  }
+}

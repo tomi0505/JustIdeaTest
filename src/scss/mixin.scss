@@ -1,0 +1,51 @@
+@mixin rwd($getBreakpoint) {
+  @if map-has-key($breakpoints, $getBreakpoint) {
+    @media (min-width: #{map-get($breakpoints, $getBreakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $getBreakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin px($px: 0) {
+  padding-left: $px;
+  padding-right: $px;
+}
+
+@mixin pos($position: absolute, $top: 0, $left: 0, $right: null, $bottom: null) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+//RESET
+@mixin reset($tag) {
+  @if $tag == li {
+    list-style-type: none;
+  }
+  @else if $tag == a {
+    text-decoration: none;
+    color: $black;
+  }
+  @else if $tag == btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+  } @else if $tag == inputText {
+      border: none;
+      background-color: transparent;
+  }
+}
