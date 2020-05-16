@@ -8,6 +8,10 @@
   padding: 50px 30px;
   max-width: 1140px;
   overflow: hidden;
+
+  @include rwd(1360px) {
+    overflow: visible;
+  }
 }
 
 .main-title-h {
@@ -70,7 +74,6 @@
       left: 0;
       width: 325px;
       grid-template-columns: 1fr;
-      //white-space: nowrap;
 
       &:nth-child(1) {
         top: -76px;
@@ -183,6 +186,10 @@
         .offer-b__content-container {
           grid-column: 1/2;
         }
+
+        @include rwd(1360px) {
+          left: -208px;
+        }
       }
 
       &:nth-child(9) {
@@ -246,6 +253,10 @@
 
         .offer-b__content-container {
           padding-right: 80px;
+
+          @include rwd(large) {
+            padding-right: 0;
+          }
         }
       }
 
@@ -255,6 +266,10 @@
 
         .offer-b__content-container {
           padding-left: 80px;
+
+          @include rwd(large) {
+            padding-left: 0;
+          }
         }
       }
 
@@ -263,6 +278,10 @@
           padding: 0;
         }
       }
+    }
+
+    @include rwd(1360px) {
+      white-space: nowrap;
     }
   }
 
