@@ -49,6 +49,10 @@
   }
 }
 
+.text-bold-h {
+  font-weight: 700;
+}
+
 //PAGE
 .offer-b {
   display: grid;
@@ -66,6 +70,10 @@
 
     @include rwd(medium) {
       grid-template-columns: 1fr 81px;
+
+      .offer-b__content-container {
+        margin-right: 10px;
+      }
     }
 
     @include rwd(tablet) {
@@ -74,6 +82,10 @@
       left: 0;
       width: 325px;
       grid-template-columns: 1fr;
+
+      .offer-b__content-container {
+        margin-right: 0;
+      }
 
       &:nth-child(1) {
         top: -76px;
@@ -367,8 +379,14 @@
     align-items: center;
 
     &--user-accept-terms-container {
-      margin: 30px 0 38px;
+      margin: 30px 0 38px 6px;
+      flex-direction: row;
       justify-content: center;
+      text-align: left;
+
+      @include rwd(medium) {
+        margin-left: 0;
+      }
     }
 
     @include rwd(medium) {
@@ -376,9 +394,22 @@
     }
   }
 
+  &__user-employers-quantity,
+  &__user-year-profit-of-company {
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    background-image: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+    background-position-y: center;
+    background-size: 13px;
+  }
+
   &__user-message {
     margin-left: 0;
     margin-right: 0;
+    font-family: 'Roboto';
   }
 
   &__user-accept-terms-label {
@@ -393,8 +424,10 @@
 
   &__user-send-form-btn {
     padding: 15px 35px;
+    font-family: 'Roboto';
     font-size: 0.9rem;
     color: $white-color;
+    font-weight: 700;
     background-color: $differentiator-color;
     border: none;
     border-radius: 5px;
